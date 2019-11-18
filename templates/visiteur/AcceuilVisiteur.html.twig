@@ -1,0 +1,49 @@
+{# empty Twig template #}
+{% extends "base.html.twig" %}
+{% block title %}
+Formulaire Connexion Visiteur
+{% endblock %}
+{% block nav %}
+    <html>
+        <style>
+            .imgnav{
+                border-radius :25%;
+            }
+            #navo{
+                overflow:hidden;
+                position:fixed;
+                top:0;
+                width:100%;
+            }
+            
+        </style>
+        <body>
+           
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navo" >
+                   <a class="nav-link" href="AccueilVisiteur"> <img class="imgnav" src='img/logo.gif' width='50px'/></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ path("SaisirFicheFrais")}}">Fiche des Frais</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ path("ConsultationFicheFrais")}}">Consultation des fichiers</a>
+                      </li>
+                      
+                    </ul>
+                  </div> 
+                    <div style="float: right;  margin: 10px; color: #2fa4e0; font-family: 'URW Chancery L', cursive;  " ><h4><strong>{{ app.session.get('nom')}} {{ app.session.get('prenom')}}</strong></h4></div>
+                  <div>
+                     <a href="{{ path('DeconnexionVisiteur') }}" style="float: right" type="button" class="btn btn-outline-danger">Déconexion</a>                     
+                  </div>
+                  
+                </nav>
+            </div>
+        </body>
+    </html>
+{% endblock %}{# empty Twig template #}

@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+{% block title %}
+Formulaire Connexion
+{% endblock %}
+{% block body %}
+    <style>
+            body{
+                background-image:url({{asset('img/94.jpg')}});
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+            }
+        </style>
+    <center>
+        <h3>Bienvenue</h3>
+        <a type="button" class="btn btn-primary" style="width:50em; height:40px; font-family:Impact" href="{{ path('LoginComptable') }}">Comptable</a>
+        </br>
+        <p> 
+        </p>
+        <a type="button" class="btn btn-info" style="width:50em; height:40px; font-family:Impact" href="{{ path('LoginVisiteur') }}">Visiteur</a>
+</center>
+{% endblock %}{# empty Twig template #}
